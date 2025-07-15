@@ -3,42 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Hello World</title>
+    <title>Your Name - Resume Landing Page</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f0f2f5;
-            margin: 0;
+            background-color: #f3f4f6; /* Light gray background */
         }
-        .container {
-            background-color: #ffffff;
-            padding: 2.5rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 90%;
-            width: 400px;
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        h1 {
-            color: #2d3748;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
         }
-        p {
-            color: #4a5568;
-            font-size: 1.25rem;
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>{{.Message}}</h1>
-        <p>This message is rendered using a Go HTML template!</p>
+<body class="flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+    <div class="bg-white shadow-xl rounded-2xl p-6 sm:p-8 lg:p-10 max-w-4xl w-full mx-auto my-8 border border-gray-200">
+        <!-- Hero Section -->
+        <section class="flex flex-col sm:flex-row items-center sm:items-start gap-6 pb-8 border-b border-gray-200 mb-8">
+            <div class="flex-shrink-0">
+                <!-- Placeholder for profile picture -->
+                <img src="https://placehold.co/150x150/a78bfa/ffffff?text=Profile" alt="Profile Picture" class="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover shadow-lg border-4 border-purple-300">
+            </div>
+            <div class="text-center sm:text-left">
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2 leading-tight">Your Name Here</h1>
+                <p class="text-xl sm:text-2xl font-semibold text-purple-700 mb-4">Your Professional Title / Role</p>
+                <p class="text-base sm:text-lg text-gray-600 max-w-2xl">
+                    Passionate and innovative [Your Field] with a strong focus on [Key Area 1] and [Key Area 2].
+                    Dedicated to building impactful solutions and continuously learning new technologies.
+                </p>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 border-b-2 border-purple-500 pb-2 inline-block">About Me</h2>
+            <p class="text-gray-700 leading-relaxed text-lg">
+                I am a [Your Profession] with X years of experience in [Industry/Domain]. My expertise lies in
+                [Specific Skill 1], [Specific Skill 2], and [Specific Skill 3]. I thrive in dynamic environments
+                and am always eager to tackle new challenges that push my boundaries and allow me to contribute
+                to meaningful projects.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 border-b-2 border-purple-500 pb-2 inline-block">Skills</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">JavaScript</span>
+                
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">C#</span>
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">VISUAL BASIC</span>
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">C++</span>
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">GO</span>
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">SQL</span>
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">.NET</span>
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">Git</span>
+                <span class="bg-purple-100 text-purple-800 text-sm font-medium px-4 py-2 rounded-full shadow-md">Docker</span>
+                <!-- Add more skills as needed -->
+            </div>
+        </section>
+
+        <!-- Call to Action / Full Resume Link -->
+        <section class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Want to know more?</h2>
+            <a href="your-full-resume.pdf" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                View My Full Resume (PDF)
+            </a>
+            <!-- Or link to an online portfolio/LinkedIn -->
+            <!-- <a href="https://linkedin.com/in/yourprofile" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 ml-4">
+                Connect on LinkedIn
+            </a> -->
+        </section>
+
+        <!-- Contact Section -->
+        <section class="text-center pt-8 border-t border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+            <div class="flex flex-wrap justify-center gap-4 text-lg">
+                <a href="mailto:your.email@example.com" class="text-purple-600 hover:text-purple-800 transition duration-200 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    your.email@example.com
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="text-purple-600 hover:text-purple-800 transition duration-200 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.3 0H3.7C1.65 0 0 1.65 0 3.7v12.6C0 18.35 1.65 20 3.7 20h12.6c2.05 0 3.7-1.65 3.7-3.7V3.7C20 1.65 18.35 0 16.3 0zM6 17H3V7h3v10zM4.5 5.25c-1.24 0-2.25-1.01-2.25-2.25S3.26 0.75 4.5 0.75 6.75 1.76 6.75 3 5.74 5.25 4.5 5.25zM17 17h-3v-5.7c0-1.7-.62-2.85-2.25-2.85-1.23 0-1.96.83-2.28 1.63V17H7V7h3v1.5h.07c.43-.72 1.5-1.75 3.18-1.75 3.42 0 4.15 2.23 4.15 6.8V17z" clip-rule="evenodd"></path></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="text-purple-600 hover:text-purple-800 transition duration-200 flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.417 2.865 8.16 6.839 9.48.5.092.682-.217.682-.483 0-.237-.008-.867-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.004.07 1.532 1.03 1.532 1.03.89 1.529 2.344 1.089 2.91.832.09-.645.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.949 0-1.09.39-1.984 1.03-2.68-.104-.253-.448-1.27.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0110 4.887c.85.006 1.705.114 2.519.336 1.909-1.296 2.747-1.025 2.747-1.025.546 1.38.202 2.398.098 2.65.64.696 1.026 1.59 1.026 2.68 0 3.848-2.339 4.692-4.566 4.942.359.31.678.92.678 1.855 0 1.338-.013 2.419-.013 2.747 0 .268.18.579.688.482C17.146 18.17 20 14.426 20 10.017A9.994 9.994 0 0010 0z" clip-rule="evenodd"></path></svg>
+                    GitHub
+                </a>
+                <!-- Add more social links as needed -->
+            </div>
+        </section>
     </div>
 </body>
 </html>
